@@ -9,18 +9,18 @@
 
 const arrayOfNumbers = [1, 2, 3, 4, 5, 6];
 const itemToSearch = 4;
-// Define NEG_INF constant
+
 const NEG_INF = -1000000;
 
-// Define createPop function
+
 function createPop(arrayOfNumbers, itemToSearch) {
-  // Define variables currIndex and check
+
   let currIndex = NEG_INF;
   let check = false;
 
-  // Define searchForElement function
+
   function searchForElement() {
-    // Check if itemToSearch is present in arrayOfNumbers
+ 
     if (arrayOfNumbers.includes(itemToSearch)) {
       currIndex = arrayOfNumbers.indexOf(itemToSearch);
       check = true;
@@ -30,15 +30,18 @@ function createPop(arrayOfNumbers, itemToSearch) {
     }
   }
 
-  // Call searchForElement function
+
   searchForElement();
 
-  // Return a function to display result
+
   return function () {
     if (check) {
       return `The item is present and is at index ${currIndex}`;
-    } else {
+      
+    } 
+    else {
       return `The item is not present and is at index ${currIndex}`;
+      
     }
   };
 }
